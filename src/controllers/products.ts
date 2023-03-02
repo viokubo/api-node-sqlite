@@ -40,7 +40,8 @@ const updateProduct = async (req: Request, res: Response) => {
     .catch((err) => InternalServerError(res, err));
 };
 
-const listProducts = (req: Request, res: Response) => {
+
+const listProducts = (_req: Request, res: Response) => {
   productModel
     .listProducts()
     .then((products) => res.json(products))
